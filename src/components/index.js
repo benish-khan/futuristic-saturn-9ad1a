@@ -1,5 +1,6 @@
 import Action from './Action';
 import Announcement from './Announcement';
+import bbform from './bbform';
 import BlogFeedItemFilter from './BlogFeedItemFilter';
 import BlogFeedSection from './BlogFeedSection';
 import BlogPostAuthor from './BlogPostAuthor';
@@ -25,6 +26,7 @@ import Layout from './Layout';
 export {
     Action,
     Announcement,
+    bbform,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostAuthor,
@@ -51,6 +53,7 @@ export {
 export default {
     Action,
     Announcement,
+    bbform,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostAuthor,
