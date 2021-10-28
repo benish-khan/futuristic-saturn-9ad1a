@@ -26,7 +26,7 @@ import Layout from './Layout';
 export {
     Action,
     Announcement,
-    bbform,
+    Bbform,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostAuthor,
@@ -53,7 +53,7 @@ export {
 export default {
     Action,
     Announcement,
-    bbform,
+    Bbform,
     BlogFeedItemFilter,
     BlogFeedSection,
     BlogPostAuthor,
