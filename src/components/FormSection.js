@@ -72,7 +72,7 @@ export default class FormSection extends React.Component {
                 			</div>
                 			)}
                 			<div className={classNames('section__form', 'my-2', 'cell-12', {'cell-md-5': (is_horiz && has_text) && (form_width === 'fourty'), 'cell-md-6': (is_horiz && has_text) && (form_width === 'fifty'), 'cell-md-7': (is_horiz && has_text) && (form_width === 'sixty'), 'order-first': (form_pos === 'top') || (form_pos === 'left')})}>
-                				<form name={_.get(section, 'form_id', null)} id={_.get(section, 'form_id', null)}{...(_.get(section, 'form_action', null) ? ({action: _.get(section, 'form_action', null)}) : null)} method="POST" data-netlify="true" data-netlify-honeypot={_.get(section, 'form_id', null) + '-bot-field'} className={classNames({'form-inline': form_is_inline, 'card': form_is_card, 'p-4': form_is_card, 'p-sm-5': form_is_card})}>
+                				<form name={_.get(section, 'form_id', null)} id={_.get(section, 'form_id', null)} action="/.netlify/functions/form-handler" method="POST" data-netlify="true" data-netlify-honeypot={_.get(section, 'form_id', null) + '-bot-field'} className={classNames({'form-inline': form_is_inline, 'card': form_is_card, 'p-4': form_is_card, 'p-sm-5': form_is_card})}>
                 					<div className="sr-only">
                 						<label id={_.get(section, 'form_id', null) + '-honeypot-label'} htmlFor={_.get(section, 'form_id', null) + '-honeypot'}>Don't fill this out if you're human:</label>
                 						<input aria-labelledby={_.get(section, 'form_id', null) + '-honeypot-label'} id={_.get(section, 'form_id', null) + '-honeypot'} name={_.get(section, 'form_id', null) + '-bot-field'} />
