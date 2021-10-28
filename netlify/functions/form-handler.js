@@ -69,23 +69,19 @@ exports.handler = (event, context, callback) => {
     console.log(`data:${response.data}` )
     console.log(`headers:${response.headers}` )
 
-    if (response.headers['content-type'] === 'application/x-www-form-urlencoded') {
-      // Do redirect for non JS enabled browsers
-      return callback(null, {
-        statusCode: 302,
-        headers: {
-          Location: '/thanks.html',
-          'Cache-Control': 'no-cache',
-        },
-        body: JSON.stringify({})
-      });
-    }
 
-    // Return data to AJAX request
+    // Do redirect for non JS enabled browsers
     return callback(null, {
-      statusCode: 200,
-      body: JSON.stringify({ emailAdded: true })
-    })
+    statusCode: 302,
+    headers: {
+        Location: '/',
+        'Cache-Control': 'no-cache',
+    },
+    body: JSON.stringify({})
+    });
+
+
+
   }).catch(function(error) {
     if (error.response) {
       // The request was made and the server responded with a status code
