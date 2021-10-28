@@ -6,7 +6,6 @@ const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
 
 exports.handler = (event, context, callback) => {
   let body = {}
-  console.log(event)
   try {
     body = JSON.parse(event.body)
   } catch (e) {
@@ -45,7 +44,7 @@ exports.handler = (event, context, callback) => {
 
   const data = {
     email_address: body.email,
-    status: "pending",
+    status: "subscribed",
     merge_fields: {}
   };
 
