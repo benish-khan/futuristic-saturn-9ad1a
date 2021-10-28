@@ -57,7 +57,7 @@ exports.handler = (event, context, callback) => {
   axios(
     {
       method: 'post',
-      url: `https://us19.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`, //change region (us19) based on last values of ListId.
+      url: `https://us5.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`, //change region (us19) based on last values of ListId.
       data: subscriber,
       auth: {
         username: 'apikey', // any value will work 
