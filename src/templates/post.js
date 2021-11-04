@@ -11,6 +11,7 @@ import BlogPostTags from '../components/BlogPostTags';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
+// this is a test note
 export const query = graphql`
   query($url: String) {
     sitePage(path: {eq: $url}) {
