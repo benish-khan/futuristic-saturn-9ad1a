@@ -99,4 +99,3 @@ export default class FormSection extends React.Component {
         );
     }
 }
-// Line 75 is the netlify=true setting enabled for function to work wheh form is triggered. 
